@@ -1826,20 +1826,20 @@ DDEClientitem1.DDEitem:='c' // имя сервер итема<br>
 Запускать после сервера, а то клиент не найдет сервера<br>
 </div>
 <hr>
-<div class="no no1">
+<div class="no no3">
 <a id="y142"></a>142<br>
 OLE<br>
 позволяет редактировать word-документы из самодельной проги<br>
 На форму OleContainer,menu,saveDialog<br>
-в меню пункты: новый, сохранить, закр.<br>
-OleContainer1.Align:=alClient;<br>
-код в меню\новый<br>
-OleContainer1.InserrtObjectDialog;<br>
-меню\сохр<br>
+в меню пункты: новый, сохранить, закр.<div class="kod">
+OleContainer1.Align:=alClient;</div>
+код в меню\новый<div class="kod">
+OleContainer1.InserrtObjectDialog;</div>
+меню\сохр<div class="kod">
 if not Savedialog1.Execute then exit;<br>
-OleContainer1.SaveAsDocument(savedialog1.filename);<br>
-меню\закрыть<br>
-OleContainer1.DestroyObject;<br>
+OleContainer1.SaveAsDocument(savedialog1.filename);</div>
+меню\закрыть<div class="kod">
+OleContainer1.DestroyObject;</div>
 Запустить прогу.<br>
 Меню\Новый\Из файла. Выбрать .doc. Откроется документ Word. Двойной щелчек на OlE и откроется Word. Вносим изменения, сохранить, меню\Закрыть<br>
 ----------<br>
@@ -1856,7 +1856,7 @@ OLE<br>
 <a id="y143"></a>143<br>
 OLE автомат / программное создание документа Word<br>
 uses comObj<br>
-На форму Edit, Button, Memo<br>
+На форму Edit, Button, Memo<div class="kod">
 Memo.lines=Приглашаем вас в воскресенье на день рождения<br>
 Button.onclick<br>
 var w: variant; i: integer;<br>
@@ -1865,9 +1865,9 @@ w.AppShow;// показать<br>
 w.FileNew;// нов. файл<br>
 w.Insert(edit1.text+#13);//добавление строк<br>
 for i:=0 to memo1.lines.count do<br>
-w.insertt(memo1.lines[i]+#13)<br>
+w.insert(memo1.lines[i]+#13)<br>
 w.FileSave;// сохранение<br>
-w.DocClose(2);// закрытие<br>
+w.DocClose(2);// закрытие</div>
 В edit ввожу имя, жму кнопку, запускается Word, сохраняю документ!<br>
 </div>
 <hr>
