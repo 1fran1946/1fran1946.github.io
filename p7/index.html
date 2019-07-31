@@ -37,12 +37,13 @@ table {margin: auto;border-collapse: collapse;}
  <p>
   <img class="okey" src="php1.png" alt="">
  </p>
+ <!--
 <img src="xoy.png" alt="">
 <img src="flag.png" alt="" class="fg">
 <img src="flag.png" alt="" class="fg" style="background: blue;">
 <img src="flag.png" alt="" class="fg" style="background: #f58220;">
 <img src="ajax.png" alt="" width=55>
-
+-->
 <p>
  
 <div class="no no5"><a id="y"></a>
@@ -400,7 +401,7 @@ echo(($d/60)/60/)/24);// разница между датами<div class="kod">
 const OP='24-06-2019';// Акция, попадание даты в акцию<br>
 if (date('d-m-Y')==OP) echo "Привет, друг!";</div></div><br>
  
-<div class="no no5"><a id="y23"></a>
+<div class="no no5"><a id="y23"></a>23<br>
 Формы Action - путь к php файлу<div class="kod">
 &lt;form method='POST' action='/handl.php'&gt;<br>
 &lt;input type='text' name='log'&gt;<br>
@@ -1384,7 +1385,48 @@ php 7<br>
 <div class="no no5"><a id="y94"></a>94<br>
 Smarty ругается на CSS<br>
 29.7.19<br>
-Заключай CSS в программные скобки {literal}{/literal}<br></div><br>
+Заключай CSS в программные скобки {literal}{/literal}<br>
+<hr>
+<!-- <fieldset><legend>haha</legend></fieldset> -->
+&lt;fieldset&gt;&lt;legend&gt;haha&lt;/legend&gt;&lt;/fieldset&gt;
+</div><br>
+ 
+<div class="no no5"><a id="y95"></a>95<br>
+Smarty <img src="bart.ico" alt=""><br>31.07.2019<br>
+Качаем с <a href="http://www.smarty.net">http://www.smarty.net</a><br>
+В папке сайта делаем:<div class="kod">
+libs // скопирована из архива<br>
+tmp // создать<br>
+vw // создать и создать внутри текстовый t.tpl<br>
+index.php<br>
+</div>
+<fieldset><legend>index.php</legend>
+&lt;?php</br>
+require_once 'libs/Smarty.class.php';//Подключаем класс Smarty</br>
+$b = new Smarty();//Создадим объект класса Smarty</br>
+$b-&gt;template_dir='vw'; // папка шаблона тут</br>
+$b-&gt;compile_dir='tmp'; // хз</br>
+</br>
+$s='Данных';</br>
+$b-&gt;assign('s',$s);</br>
+$a=array(8,9,7,5,4);</br>
+$b-&gt;assign('a',$a);</br>
+$b-&gt;display('t.tpl');</br>
+?&gt;</br>
+
+</fieldset>
+<fieldset><legend>vw/t.tpl</legend>
+&lt;head&gt;</br>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF8"&gt;</br>
+{literal}&lt;style&gt;div {background: gray; margin: 5px;}&lt;/style&gt;{/literal}</br>
+&lt;/head&gt;</br>
+&lt;body&gt;</br>
+Массив {$s}</br>
+{foreach $a as $i} </br>
+&lt;div&gt;{$i}&lt;/div&gt;</br>
+{/foreach}</br>
+&lt;/body&gt;</br>
+</fieldset></div><br>
 </p>
 <hr>2002-2019
 </body>
