@@ -3673,7 +3673,53 @@ d
 <div class="mara" onclick="cpy(fe33v3);"></div></div>  
 </div>
 
-
+<div class="mara" onclick="cpy(fe33v222);"></div></div>  
+Копирование тескта одним кликом
+<div class="kod" style="position:relative;" id="fe33v3">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+&lt;style&gt;
+.kod {padding: 10px; 
+background: #e9ffc7; 
+width: 85%; 
+text-align: left; 
+margin: auto; 
+color: #000;}
+.mara {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAIAAAAS8MqlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEsSURBVDhPnZC9TsMwFIV5RXZ4BF6BjpHYwgQrCxLpEDEQJ6FlohJMaQOoQvyUhZaGspHE8U+55lbErU0j9egosm/O5yN76zsvNrDCTg09Pb/oIdMLbK4Jtp3O5XrSjsE3iqI1ZI2lb5+9x2wuZRzHwIRhSAjRo7qX2iRAUsKiZegiCOxYOoK2KelP2rdjyP2esxCS3e6VBZNSSCG44CDEVLWaCdy6rvtH1thglPWGU5JMvJt3zB2cP+x7d1wIx3GAQa1icCpWMc4Qg4kacg7r2dcMbMEGr9n18CNIxmfLbXsn6e5xf/swgYkF04UYY7xiVVVRCqYlTFYxXb7v123te9V2ZGszDW8AIdVBS1oWpXLejMFvbGt5qm3HejfTiJlqxv4TBuxYozfC8uIHUDp6oFBQcH0AAAAASUVORK5CYII=);
+cursor: pointer;
+width: 18px; 
+height: 19px; 
+position: absolute; 
+right: 0px; 
+top: 0px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body bgcolor=yellow&gt;
+&lt;div style="width: 400px;background: #fff; padding: 33px; margin: auto;"&gt;
+Экспотенциальная запись - представление действительных чисел в виде мантиссы и порядка
+&lt;div class="kod" style="position:relative;" id="fey"&gt;
+N=M*nP
+&lt;div class="mara" onclick="cpy(fey);" title="Copy"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function cpy(k){ // копирование в буфер обмена
+  window.getSelection().removeAllRanges();
+  var range = document.createRange();  
+  range.selectNode(k);  
+  window.getSelection().addRange(range);  
+  try {
+    var successful = document.execCommand('copy');  
+  } catch(err) { }  
+  window.getSelection().removeAllRanges();  
+}
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;
+<div class="mara" onclick="cpy(fe33v222);"></div></div>  
+</div>	
+	
 
 <hr>
 2002-2019
